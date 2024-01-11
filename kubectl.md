@@ -1,4 +1,6 @@
 # kubectl
+## Notes
+> Note: The kubectl get command features a rich set of flags that allows you to customize the output format using the `-o` or `--output` flag, for example. You can specify the `-w` or `--watch` flag to start watching updates to a particular object.—https://kubernetes.io/docs/reference/kubectl/#examples-common-operations
 ## Commands
 ### Get deployments
 `kubectl get deployments -n {environment}`
