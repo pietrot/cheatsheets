@@ -6,10 +6,10 @@
 `kubectl get deployments -n {environment}`
 
 ### Restart a deployment
-kubectl rollout restart deployment {deploymentName} -n {environment}
+`kubectl rollout restart deployment {deploymentName} -n {environment}`
 
 ### rollback a deployment
-kubectl rollout undo deployment/{deploymentName} --to-revision={revisionID} -n {environment}
+`kubectl rollout undo deployment/{deploymentName} --to-revision={revisionID} -n {environment}`
 
 ### Get stored secret
 `kubectl get secret {secret-name} -n {environment} -o yaml`
@@ -27,7 +27,7 @@ kubectl rollout undo deployment/{deploymentName} --to-revision={revisionID} -n {
 `kubectl port-forward {pod-name} 8080:8080 -n {environment}`
 
 ### Get pods
-`kubectl get pods -n {environment}`
+`kubectl get pods -n {environment} -w`
 
 ### Describe a pod
 `kubectl describe pod {pod-name} -n {environment}`
