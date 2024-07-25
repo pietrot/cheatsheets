@@ -52,3 +52,8 @@ $ gcloud projects add-iam-policy-binding {project_id} \
 --member='serviceAccount:terraform@{project_id}.iam.gserviceaccount.com' \
 --role='roles/storage.admin'
 ```
+
+## Import `terraform` state bucket
+```sh
+$ terraform import google_storage_bucket.gs-{project_id}-terraform-state {project_id}/{project_id}-terraform-state
+```
