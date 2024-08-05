@@ -1,6 +1,14 @@
 # kubectl
 ## Notes
 > Note: The kubectl get command features a rich set of flags that allows you to customize the output format using the `-o` or `--output` flag, for example. You can specify the `-w` or `--watch` flag to start watching updates to a particular object.—https://kubernetes.io/docs/reference/kubectl/#examples-common-operations
+
+## Config
+### List and switch contexts
+```
+kubectl config get-contexts
+kubectl config use-context <context_name>
+```
+
 ## Commands
 ### Get deployments
 `kubectl get deployments -n {environment}`
@@ -16,6 +24,10 @@
 
 ### Create secret
 `kubectl create secret generic {secret-name} --from-literal={key}={value} -n {environment}`
+
+-or from file-
+
+`kubectl create secret generic {secret-name} --from-file=/path/to/file -n {environment}`
 
 ### Edit secret
 `kubectl edit secret {secret-name} -n {environment}`
