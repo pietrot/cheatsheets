@@ -11,7 +11,7 @@ $ kubectl config current-context
 ### List and switch contexts
 ```
 $ kubectl config get-contexts
-$ kubectl config use-context <context_name>
+$ kubectl config use-context {context-name}
 ```
 
 ## Commands
