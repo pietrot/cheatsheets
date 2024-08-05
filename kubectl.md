@@ -81,7 +81,7 @@ $ kubectl exec -it -n production {pod-name} -- /bin/bash
 
 ### Tail logs for a given pod
 ```
-$ kubectl logs --follow {pod-name} -n {environment}
+$ kubectl logs --follow {pod-name} -n {environment} -c {container-name}
 ```
 
 # Base64 encode/decode values
