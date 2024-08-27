@@ -54,6 +54,11 @@ $ kubectl edit secret {secret-name} -n {environment}
 $ kubectl delete secret {secret-name} -n {environment}
 ```
 
+### Copy secret to another namespace
+```
+$ kubectl get secret <secret-name> -n <current> -o yaml | sed 's/namespace: <current>/namespace: <dest>/g' | kubectl create -f -
+```
+
 ### Port forwarding
 ```
 $ kubectl port-forward {pod-name} 8080:8080 -n {environment}
