@@ -57,3 +57,9 @@ $ gcloud projects add-iam-policy-binding {project_id} \
 ```sh
 $ terraform import google_storage_bucket.gs-{project_id}-terraform-state {project_id}/{project_id}-terraform-state
 ```
+
+## Upgrade provider
+```sh
+$ terraform init -upgrade
+```
+—https://developer.hashicorp.com/terraform/tutorials/configuration-language/provider-versioning
